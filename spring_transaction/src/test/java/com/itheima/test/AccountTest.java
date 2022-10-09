@@ -5,6 +5,8 @@ import com.itheima.service.AccountService;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.io.IOException;
+
 /**
  * Description ==> TODO
  * BelongsProject ==> spring_second
@@ -16,7 +18,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class AccountTest {
 
     @Test
-    public void testAccount(){
+    public void testAccount() throws IOException {
 
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
 

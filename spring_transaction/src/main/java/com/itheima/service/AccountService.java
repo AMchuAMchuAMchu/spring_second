@@ -30,7 +30,7 @@ import java.sql.Connection;
 public class AccountService {
 
     @Transactional
-    public void transfer(){
+    public void transfer() throws IOException {
 
         InputStream ars = null;
         try {
@@ -48,6 +48,7 @@ public class AccountService {
         mapper.insertAdd(100);
 
         int i = 1/0;
+//        if(true)throw new IOException();
 
         mapper.insertSub(100);
 
