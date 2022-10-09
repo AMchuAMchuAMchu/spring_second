@@ -34,10 +34,6 @@ public class AccountService {
 
         DataSourceTransactionManager dtm = new DataSourceTransactionManager();
 
-        DriverManagerDataSource dmd = new DriverManagerDataSource();
-
-        dtm.setDataSource(dmd);
-
         return dtm;
 
     }
@@ -63,7 +59,7 @@ public class AccountService {
 
         mapper.insertAdd(100);
 
-        int i = 1/0;
+//        int i = 1/0;
 
         mapper.insertSub(100);
 

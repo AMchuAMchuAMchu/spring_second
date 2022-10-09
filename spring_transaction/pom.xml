@@ -48,6 +48,11 @@
             <artifactId>spring-jdbc</artifactId>
             <version>5.2.12.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.11</version>
+        </dependency>
 
 
 
