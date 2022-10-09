@@ -41,15 +41,17 @@ public class AccountService {
 
         SqlSessionFactory build = new SqlSessionFactoryBuilder().build(ars);
 
-        SqlSession sqlSession = build.openSession(true);
+        SqlSession sqlSession = build.openSession();
 
         AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
 
         mapper.insertAdd(100);
 
-//        int i = 1/0;
+        int i = 1/0;
 
         mapper.insertSub(100);
+
+        sqlSession.commit();
 
 
     }

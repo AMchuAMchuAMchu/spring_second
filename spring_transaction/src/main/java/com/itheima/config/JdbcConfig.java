@@ -23,7 +23,7 @@ public class JdbcConfig {
 
     @Value("${jdbc.driverClassName}")
     private String driverClassName;
-    @Value("${dbc.url}")
+    @Value("${jdbc.url}")
     private String url;
     @Value("${jdbc.username}")
     private String username;
