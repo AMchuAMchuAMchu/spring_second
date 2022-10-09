@@ -29,18 +29,6 @@ import java.sql.Connection;
 @Service
 public class AccountService {
 
-    @Bean
-    public PlatformTransactionManager getTransactional(){
-
-        DataSourceTransactionManager dtm = new DataSourceTransactionManager();
-
-        return dtm;
-
-    }
-
-
-
-
     @Transactional
     public void transfer(){
 
