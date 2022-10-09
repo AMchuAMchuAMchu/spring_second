@@ -1,15 +1,22 @@
 package com.itheima.service;
 
 import com.itheima.mapper.AccountMapper;
+import com.mysql.cj.MysqlConnection;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
 
 /**
  * Description ==> TODO
@@ -22,8 +29,25 @@ import java.io.InputStream;
 @Service
 public class AccountService {
 
+    @Bean
+    public PlatformTransactionManager getTransactional(){
+
+        DataSourceTransactionManager dtm = new DataSourceTransactionManager();
+
+        DriverManagerDataSource dmd = new DriverManagerDataSource();
+
+        dtm.setDataSource(dmd);
+
+        return dtm;
+
+    }
+
+
+
+
     @Transactional
     public void transfer(){
+
         InputStream ars = null;
         try {
             ars = Resources.getResourceAsStream("mybatis-config.xml");
@@ -44,8 +68,9 @@ public class AccountService {
         mapper.insertSub(100);
 
 
-
-
     }
+
+
+
 
 }
