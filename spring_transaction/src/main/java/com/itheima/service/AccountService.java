@@ -31,11 +31,13 @@ public class AccountService {
 
         SqlSessionFactory build = new SqlSessionFactoryBuilder().build(ars);
 
-        SqlSession sqlSession = build.openSession();
+        SqlSession sqlSession = build.openSession(true);
 
         AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
 
         mapper.insertAdd(100);
+
+//        int i = 1/0;
 
         mapper.insertSub(100);
 

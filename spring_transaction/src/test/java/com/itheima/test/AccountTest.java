@@ -24,7 +24,6 @@ public class AccountTest {
 
         bean.transfer();
 
-
     }
 
 }
