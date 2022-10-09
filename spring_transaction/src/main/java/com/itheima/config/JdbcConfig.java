@@ -21,13 +21,13 @@ import javax.sql.DataSource;
 @Component
 public class JdbcConfig {
 
-    @Value("${driverClassName}")
+    @Value("${jdbc.driverClassName}")
     private String driverClassName;
-    @Value("url")
+    @Value("${dbc.url}")
     private String url;
-    @Value("username")
+    @Value("${jdbc.username}")
     private String username;
-    @Value("password")
+    @Value("${jdbc.password}")
     private String password;
 
 
