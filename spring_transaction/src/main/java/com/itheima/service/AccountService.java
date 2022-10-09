@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,6 +22,7 @@ import java.io.InputStream;
 @Service
 public class AccountService {
 
+    @Transactional
     public void transfer(){
         InputStream ars = null;
         try {
@@ -37,7 +39,7 @@ public class AccountService {
 
         mapper.insertAdd(100);
 
-//        int i = 1/0;
+        int i = 1/0;
 
         mapper.insertSub(100);
 
