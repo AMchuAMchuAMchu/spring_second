@@ -17,16 +17,4 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 public class AnimeTest01 {
 
 
-    @Test
-    public void testBeanExclude(){
-
-        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext();
-
-        AnimeController bean = ac.getBean(AnimeController.class);
-
-        bean.saveAnimeInfo();
-
-
-    }
-
 }
