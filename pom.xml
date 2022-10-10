@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring_transaction</module>
+        <module>springmvc_first01</module>
     </modules>
 
     <properties>

@@ -49,16 +49,16 @@ public class JdbcConfig {
 
     }
 
-
-    @Bean
-    public PlatformTransactionManager getPTM(DataSource dataSource){
-
-        DataSourceTransactionManager dtm = new DataSourceTransactionManager();
-
-        dtm.setDataSource(dataSource);
-
-        return dtm;
-    }
+//
+//    @Bean
+//    public PlatformTransactionManager getPTM(DataSource dataSource){
+//
+//        DataSourceTransactionManager dtm = new DataSourceTransactionManager();
+//
+//        dtm.setDataSource(dataSource);
+//
+//        return dtm;
+//    }
 
 
 }

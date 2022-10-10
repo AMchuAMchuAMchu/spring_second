@@ -29,7 +29,9 @@ import java.sql.Connection;
 @Service
 public class AccountService {
 
-    @Transactional
+
+
+//    @Transactional
     public void transfer() throws IOException {
 
         InputStream ars = null;
