@@ -3,6 +3,7 @@ package com.itheima.springmvcconfig;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
 
 /**
@@ -14,23 +15,21 @@ import org.springframework.web.servlet.support.AbstractDispatcherServletInitiali
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 @Controller
-public class MVCInit extends AbstractDispatcherServletInitializer {
+public class MVCInit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 
     @Override
-    protected WebApplicationContext createServletApplicationContext() {
-        AnnotationConfigWebApplicationContext acmvc = new AnnotationConfigWebApplicationContext();
-        acmvc.register(SpringMVCConfig.class);
-        return acmvc;
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[]{SpringMVCConfig.class};
+    }
+
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class[]{SpringMVCConfig.class};
     }
 
     @Override
     protected String[] getServletMappings() {
         return new String[]{"/"};
-    }
-
-    @Override
-    protected WebApplicationContext createRootApplicationContext() {
-        return null;
     }
 }

@@ -13,12 +13,14 @@ import org.springframework.stereotype.Controller;
  * CreateTime ==> 2022-10-10 11:28:45
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
+
+//@ComponentScan(value = "com.itheima",
+//    excludeFilters = @ComponentScan.Filter(
+//            type = FilterType.ANNOTATION,
+//            classes = Controller.class
+//    )
+//)
 @Configuration
-@ComponentScan(value = "com.itheima",
-    excludeFilters = @ComponentScan.Filter(
-            type = FilterType.ANNOTATION,
-            classes = Controller.class
-    )
-)
+@ComponentScan("com.itheima")
 public class SpringMVCConfig {
 }

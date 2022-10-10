@@ -1,7 +1,9 @@
 package com.itheima.test;
 
+import com.itheima.controller.AnimeController;
 import com.itheima.springmvcconfig.MVCInit;
 import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
 /**
@@ -18,10 +20,11 @@ public class AnimeTest01 {
     @Test
     public void testBeanExclude(){
 
-        AnnotationConfigWebApplicationContext acweb = new AnnotationConfigWebApplicationContext();
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext();
 
-        MVCInit bean = acweb.getBean(MVCInit.class);
+        AnimeController bean = ac.getBean(AnimeController.class);
 
+        bean.getAnimeInfo();
 
 
     }

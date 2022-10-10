@@ -20,7 +20,7 @@ public class AnimeController {
     @RequestMapping("/animeInfo")
     @ResponseBody
     public String getAnimeInfo(){
-        System.out.println((i++)+"Lycoris Recoil");
+        System.out.println((i++)+">> Lycoris Recoil");
         return "{'name':'Lycoris Recoil'}";
     }
 
