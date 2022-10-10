@@ -2,6 +2,7 @@ package com.itheima.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Description ==> TODO
@@ -14,11 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AnimeController {
 
-    @RequestMapping("/animeInfo")
-    public String getAnimeInfo(){
+    int i = 0;
 
-        System.out.println("Lycoris Recoil");
-        return "Lycoris Recoil";
+    @RequestMapping("/animeInfo")
+    @ResponseBody
+    public String getAnimeInfo(){
+        System.out.println((i++)+"Lycoris Recoil");
+        return "{'name':'Lycoris Recoil'}";
     }
 
 
