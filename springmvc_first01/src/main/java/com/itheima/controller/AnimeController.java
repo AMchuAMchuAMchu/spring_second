@@ -13,16 +13,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 @Controller
+@RequestMapping("/animeInfo")
 public class AnimeController {
 
     int i = 0;
 
-    @RequestMapping("/animeInfo")
+    @RequestMapping("/save")
     @ResponseBody
-    public String getAnimeInfo(){
-        System.out.println((i++)+">> Lycoris Recoil");
-        return "{'name':'Lycoris Recoil'}";
+    public String saveAnimeInfo(){
+        System.out.println((i++)+">> save Lycoris Recoil");
+        return "{'name':'save Lycoris Recoil'}";
     }
 
-
+    @RequestMapping("/delete")
+    @ResponseBody
+    public String deleteAnimeInfo(){
+        System.out.println((i++)+">> delete Lycoris Recoil");
+        return "{'name':'delete Lycoris Recoil'}";
+    }
 }

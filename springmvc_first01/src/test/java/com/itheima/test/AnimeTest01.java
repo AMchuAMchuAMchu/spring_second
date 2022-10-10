@@ -24,7 +24,7 @@ public class AnimeTest01 {
 
         AnimeController bean = ac.getBean(AnimeController.class);
 
-        bean.getAnimeInfo();
+        bean.saveAnimeInfo();
 
 
     }
