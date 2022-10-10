@@ -43,11 +43,18 @@ public class AnimeController {
 //        System.out.println((i++) + ">> save Lycoris Recoil");
 //        return "{'name':'save Lycoris Recoil'}";
 //    }
+
     @RequestMapping("/save")
     @ResponseBody
-    public String saveAnimeInfo(@RequestParam List<String> name) {
-        System.out.println(">>>");
-        name.forEach(System.out::println);
+//    public String saveAnimeInfo(@RequestParam List<String> name) {
+//        System.out.println(">>>");
+//        name.forEach(System.out::println);
+//        System.out.println((i++) + ">> save Lycoris Recoil");
+//        return "{'name':'save Lycoris Recoil'}";
+//    }
+
+    public String saveAnimeInfo(@RequestParam AnimeInfo animeInfo) {
+        System.out.println(">>>"+animeInfo);
         System.out.println((i++) + ">> save Lycoris Recoil");
         return "{'name':'save Lycoris Recoil'}";
     }
