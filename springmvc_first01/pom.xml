@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>springmvc_first01</artifactId>
-
+    <packaging>war</packaging>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -30,22 +30,6 @@
             <version>5.2.10.RELEASE</version>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
 
-                <!-- https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
-                    <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat7-maven-plugin</artifactId>
-                    <version>2.2</version>
-
-
-                <configuration>
-                    <port>80</port>
-                    <path>/</path>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

@@ -1,6 +1,7 @@
 package com.itheima.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Description ==> TODO
@@ -13,6 +14,12 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class AnimeController {
 
+    @RequestMapping("/animeInfo")
+    public String getAnimeInfo(){
+
+        System.out.println("Lycoris Recoil");
+        return "Lycoris Recoil";
+    }
 
 
 }
