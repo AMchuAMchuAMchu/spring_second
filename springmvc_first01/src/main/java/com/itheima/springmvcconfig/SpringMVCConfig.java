@@ -2,6 +2,8 @@ package com.itheima.springmvcconfig;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.stereotype.Controller;
 
 /**
  * Description ==> TODO
@@ -12,6 +14,11 @@ import org.springframework.context.annotation.Configuration;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan(value = "com.itheima",
+    excludeFilters = @ComponentScan.Filter(
+            type = FilterType.ANNOTATION,
+            classes = Controller.class
+    )
+)
 public class SpringMVCConfig {
 }
