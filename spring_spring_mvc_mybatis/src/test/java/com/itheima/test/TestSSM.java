@@ -25,8 +25,11 @@ public class TestSSM {
     @Test
     public void testInsert(){
 
-        AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
 
+        AnimeInfoMapperUtils bean = ac.getBean(AnimeInfoMapperUtils.class);
+
+        AnimeInfoMapper mapper = bean.getMapper();
         AnimeInfo animeInfo = new AnimeInfo();
         animeInfo.setName("Darling in the FRANxx");
         animeInfo.setCharacter01("zero two");
@@ -41,7 +44,11 @@ public class TestSSM {
     @Test
     public void testDelete(){
 
-        AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+        AnimeInfoMapperUtils bean = ac.getBean(AnimeInfoMapperUtils.class);
+
+        AnimeInfoMapper mapper = bean.getMapper();
 
         mapper.deleteAnime(23);
 
@@ -57,8 +64,12 @@ public class TestSSM {
 //
 //        AnimeInfoMapper mapper = bean.getMapper();
 
-        AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
 
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+        AnimeInfoMapperUtils bean = ac.getBean(AnimeInfoMapperUtils.class);
+
+        AnimeInfoMapper mapper = bean.getMapper();
         List<AnimeInfo> animeInfos = mapper.selectAnime(null);
 
         animeInfos.forEach(System.out::println);
