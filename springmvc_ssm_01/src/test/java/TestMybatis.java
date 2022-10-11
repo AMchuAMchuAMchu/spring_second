@@ -17,6 +17,16 @@ public class TestMybatis {
 
 
     @Test
+    public void testDelete(){
+
+        AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
+
+        animeMapper.deleteById();
+
+    }
+
+
+    @Test
     public void testUpdate(){
 
         AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
@@ -26,7 +36,7 @@ public class TestMybatis {
         animeInfo.setReleaseTime(2018);
         animeInfo.setCharacter01("Alice茅野爱衣");
         animeInfo.setCharacter02("尤吉欧岛崎信长");
-        animeInfo.setId(25);
+        animeInfo.setId(26);
 
 
         animeMapper.updateById(animeInfo);
