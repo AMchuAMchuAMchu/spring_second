@@ -36,7 +36,7 @@ public class TestMybatis {
         animeInfo.setReleaseTime(2018);
         animeInfo.setCharacter01("Alice茅野爱衣");
         animeInfo.setCharacter02("尤吉欧岛崎信长");
-        animeInfo.setId(26);
+        animeInfo.setId(25);
 
 
         animeMapper.updateById(animeInfo);
@@ -53,7 +53,7 @@ public class TestMybatis {
         animeInfo.setReleaseTime(2018);
         animeInfo.setCharacter01("Alice");
         animeInfo.setCharacter02("尤吉欧");
-        animeInfo.setId(25);
+        animeInfo.setId(26);
         animeMapper.insertOne(animeInfo);
 
     }
