@@ -28,37 +28,18 @@ public class TestSSM {
 //    }
 
 
-    @Autowired
-    private AnimeInfo animeInfo;
 
-
-    @Test
-    public void testAll(){
-
-        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
-
-        AnimeInfoMapper bean = ac.getBean(AnimeInfoMapper.class);
-
-        List<AnimeInfo> animeInfos = bean.selectAnime(21);
-
-        animeInfos.forEach(System.out::println);
-
-    }
 
     @Test
     public void testUpdate(){
 
         AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
-
-
-
+        AnimeInfo animeInfo = new AnimeInfo();
         animeInfo.setName("Darling in the FRANxx");
         animeInfo.setCharacter01("zero two");
         animeInfo.setCharacter02("sixteenth");
         animeInfo.setId(24);
         animeInfo.setReleaseTime(2018);
-
-
         mapper.updateAnime(animeInfo);
 
 

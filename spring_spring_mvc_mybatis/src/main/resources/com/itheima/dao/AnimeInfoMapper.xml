@@ -21,7 +21,7 @@
         </set>
         <set>
             <if test="releaseTime != null">
-                releaseTime = #{releaseTime},
+                releaseTime = #{release_time},
             </if>
         </set>
         <set>

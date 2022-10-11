@@ -19,9 +19,6 @@ import java.util.List;
 @Repository
 public interface AnimeInfoMapper {
 
-    @Select("select * from anime_info")
-    List<AnimeInfo> selectAnimeAll();
-
     void insertAnime(AnimeInfo animeInfo);
 
     void deleteAnime(Integer id);
