@@ -31,6 +31,22 @@ public class TestSSM {
 
 
     @Test
+    public void testUpdate02(){
+
+        AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
+        AnimeInfo animeInfo = new AnimeInfo();
+        animeInfo.setName("Darling in the FRANxx ClowerWorks");
+        animeInfo.setCharacter01("zero two户松遥");
+        animeInfo.setCharacter02("广上村佑翔");
+        mapper.updateAnime(animeInfo);
+
+
+    }
+
+
+
+
+    @Test
     public void testUpdate(){
 
         AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
