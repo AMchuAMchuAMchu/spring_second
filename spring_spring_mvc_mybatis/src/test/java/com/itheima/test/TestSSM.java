@@ -4,6 +4,7 @@ import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.dao.AnimeInfoMapperUtils;
 import com.itheima.pojo.AnimeInfo;
 import com.itheima.pojo.SayHello;
+import com.itheima.pojo.SayHelloImpl;
 import com.itheima.springconfig.SpringConfig;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,6 @@ import java.util.List;
  * CreateTime ==> 2022-10-11 15:58:05
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
-@Component
 public class TestSSM {
 
 //    static{
@@ -29,19 +29,18 @@ public class TestSSM {
 //    }
 
 
+
     @Autowired
     private SayHello sayHello;
+
+
 
     @Test
     public void testAnime(){
 
-        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
-
-        SayHello bean = ac.getBean(SayHello.class);
-
-        bean.printHello();
 
         sayHello.printHello();
+
 
     }
 
