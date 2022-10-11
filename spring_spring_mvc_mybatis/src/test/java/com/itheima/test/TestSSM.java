@@ -3,6 +3,7 @@ package com.itheima.test;
 import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.dao.AnimeInfoMapperUtils;
 import com.itheima.pojo.AnimeInfo;
+import com.itheima.pojo.SayHello;
 import com.itheima.springconfig.SpringConfig;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,17 @@ public class TestSSM {
 //    }
 
 
+    @Autowired
+    private SayHello sayHello;
+
+    @Test
+    public void testAnime(){
+
+        sayHello.printHello();
+
+    }
+
+
 
 
     @Test
@@ -38,6 +50,7 @@ public class TestSSM {
         animeInfo.setName("Darling in the FRANxx ClowerWorks");
         animeInfo.setCharacter01("zero two户松遥");
         animeInfo.setCharacter02("广上村佑翔");
+        animeInfo.setId(24);
         mapper.updateAnime(animeInfo);
 
 
