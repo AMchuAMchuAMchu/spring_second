@@ -1,5 +1,6 @@
 package com.itheima.test;
 
+import com.alibaba.fastjson2.JSON;
 import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.dao.AnimeInfoMapperUtils;
 import com.itheima.pojo.AnimeInfo;
@@ -10,6 +11,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
@@ -22,6 +24,7 @@ import java.util.List;
  * CreateTime ==> 2022-10-11 15:58:05
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
+@Repository
 public class TestSSM {
 
 //    static{
@@ -30,22 +33,21 @@ public class TestSSM {
 
 
 
-    @Autowired
-    private SayHello sayHello;
-
-
 
     @Test
-    public void testAnime(){
+    public void testSelectById(){
+
+        AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
+
+        List<AnimeInfo> animeInfos = mapper.selectAnimeById(24);
+
+        Object o = JSON.toJSON(animeInfos);
 
 
-        sayHello.printHello();
+        System.out.println(o);
 
 
     }
-
-
-
 
     @Test
     public void testUpdate02(){

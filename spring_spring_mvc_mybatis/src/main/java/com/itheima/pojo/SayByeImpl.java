@@ -1,25 +1,22 @@
 package com.itheima.pojo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 /**
  * Description ==> TODO
  * BelongsProject ==> spring_second
  * BelongsPackage ==> com.itheima.pojo
  * Version ==> 1.0
- * CreateTime ==> 2022-10-11 20:13:32
+ * CreateTime ==> 2022-10-11 20:33:51
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 @Component
-public class SayHelloImpl implements SayHello{
+public class SayByeImpl implements SayBye{
 
-    @Autowired
-    private SayBye sayBye;
 
     @Override
-    public void printHello() {
-        sayBye.sayByeBye();
-        System.out.println("Hello,Darling in the  FRANxx...");
+    public void sayByeBye() {
+        System.out.println("say bye bye ...:-)");
     }
 }
