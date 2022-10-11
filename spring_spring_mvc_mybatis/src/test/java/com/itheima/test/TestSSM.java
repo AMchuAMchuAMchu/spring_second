@@ -5,6 +5,7 @@ import com.itheima.dao.AnimeInfoMapperUtils;
 import com.itheima.pojo.AnimeInfo;
 import com.itheima.springconfig.SpringConfig;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
@@ -19,15 +20,29 @@ import java.util.List;
  */
 public class TestSSM {
 
+    public AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+
+    @Test
+    public void testDelete(){
+
+        AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
+
+        mapper.deleteAnime(24);
+
+    }
+
+
 
     @Test
     public void testInsert(){
 
-        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+//
+//        AnimeInfoMapperUtils bean = ac.getBean(AnimeInfoMapperUtils.class);
+//
+//        AnimeInfoMapper mapper = bean.getMapper();
 
-        AnimeInfoMapperUtils bean = ac.getBean(AnimeInfoMapperUtils.class);
-
-        AnimeInfoMapper mapper = bean.getMapper();
+        AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
 
         List<AnimeInfo> animeInfos = mapper.selectAnime(null);
 
