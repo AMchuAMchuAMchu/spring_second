@@ -20,11 +20,13 @@ import java.util.List;
  */
 public class TestSSM {
 
-    public AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
 
 
     @Test
     public void testDelete(){
+
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
 
         AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
 
