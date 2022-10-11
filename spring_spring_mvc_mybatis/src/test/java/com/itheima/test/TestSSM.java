@@ -27,17 +27,18 @@ public class TestSSM {
 
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
 
+        AnimeInfoMapperUtils bean = ac.getBean(AnimeInfoMapperUtils.class);
 
-        AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
+        AnimeInfoMapper mapper = bean.getMapper();
 
-        mapper.deleteAnime(24);
+        mapper.deleteAnime(23);
 
     }
 
 
 
     @Test
-    public void testInsert(){
+    public void testSelect(){
 
 //
 //        AnimeInfoMapperUtils bean = ac.getBean(AnimeInfoMapperUtils.class);

@@ -5,7 +5,7 @@
 <mapper namespace="com.itheima.dao.AnimeInfoMapper">
 
     <resultMap id="anime" type="com.itheima.pojo.AnimeInfo">
-        <result column="release_time" property="releaseTime"></result>
+        <result column="release_time" property="releaseTime"/>
     </resultMap>
 
     <insert id="insertAnime">
