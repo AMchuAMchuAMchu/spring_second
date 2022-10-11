@@ -21,7 +21,7 @@ public class TestMybatis {
 
         AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
 
-        animeMapper.deleteById();
+//        animeMapper.deleteById();
 
     }
 
