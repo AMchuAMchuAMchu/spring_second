@@ -21,7 +21,7 @@ public class TestMybatis {
 
         AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
 
-//        animeMapper.deleteById();
+        animeMapper.deleteById(26);
 
     }
 
@@ -34,8 +34,7 @@ public class TestMybatis {
         AnimeInfo animeInfo = new AnimeInfo();
         animeInfo.setName("SAO刀剑神域Alicization war of underworld");
         animeInfo.setReleaseTime(2018);
-        animeInfo.setCharacter01("Alice茅野爱衣");
-        animeInfo.setCharacter02("尤吉欧岛崎信长");
+        animeInfo.setCharacter01("Alice茅野爱衣整合骑士...");
         animeInfo.setId(25);
 
 
