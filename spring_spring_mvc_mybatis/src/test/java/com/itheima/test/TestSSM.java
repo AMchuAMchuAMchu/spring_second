@@ -39,7 +39,7 @@ public class TestSSM {
 
         AnimeInfoMapper bean = ac.getBean(AnimeInfoMapper.class);
 
-        List<AnimeInfo> animeInfos = bean.selectAnimeAll();
+        List<AnimeInfo> animeInfos = bean.selectAnime(21);
 
         animeInfos.forEach(System.out::println);
 
