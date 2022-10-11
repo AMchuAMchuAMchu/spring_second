@@ -2,9 +2,12 @@ package com.itheima.test;
 
 import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.dao.AnimeInfoMapperUtils;
+import com.itheima.pojo.AnimeInfo;
 import com.itheima.springconfig.SpringConfig;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.List;
 
 /**
  * Description ==> TODO
@@ -24,7 +27,11 @@ public class TestSSM {
 
         AnimeInfoMapperUtils bean = ac.getBean(AnimeInfoMapperUtils.class);
 
-        bean.getMapper();
+        AnimeInfoMapper mapper = bean.getMapper();
+
+        List<AnimeInfo> animeInfos = mapper.selectAnime(null);
+
+        animeInfos.forEach(System.out::println);
 
 
     }
