@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
@@ -29,6 +30,20 @@ public class TestSSM {
 
     @Autowired
     private AnimeInfo animeInfo;
+
+
+    @Test
+    public void testAll(){
+
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+        AnimeInfoMapper bean = ac.getBean(AnimeInfoMapper.class);
+
+        List<AnimeInfo> animeInfos = bean.selectAnimeAll();
+
+        animeInfos.forEach(System.out::println);
+
+    }
 
     @Test
     public void testUpdate(){
