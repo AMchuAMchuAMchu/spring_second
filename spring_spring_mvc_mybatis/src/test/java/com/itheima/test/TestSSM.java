@@ -4,15 +4,8 @@ import com.alibaba.fastjson2.JSON;
 import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.dao.AnimeInfoMapperUtils;
 import com.itheima.pojo.AnimeInfo;
-import com.itheima.pojo.SayHello;
-import com.itheima.pojo.SayHelloImpl;
-import com.itheima.springconfig.SpringConfig;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.itheima.test;
 
 import com.itheima.pojo.SayHello;
-import com.itheima.springconfig.SpringConfig;
+import com.itheima.controller.SpringConfig;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

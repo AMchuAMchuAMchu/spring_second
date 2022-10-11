@@ -25,13 +25,15 @@ public class AnimeController {
     int i = 0;
 
 
-//    public String saveAnimeInfo(@RequestParam("name01") String name02,@RequestParam("releaseTime") Integer releaseTime02){
-//    public String saveAnimeInfo(String name01,Integer releaseTime){
-//        System.out.println("name01>>"+name01);
-//        System.out.println("releaseTime>>"+releaseTime);
-//        System.out.println((i++)+">> save Lycoris Recoil");
-//        return "{'name':'save Lycoris Recoil'}";
-//    }
+    //    public String saveAnimeInfo(@RequestParam("name01") String name02,@RequestParam("releaseTime") Integer releaseTime02){
+    @RequestMapping("/test")
+    @ResponseBody
+    public String saveAnimeInfo(String name01, Integer releaseTime) {
+        System.out.println("name01>>" + name01);
+        System.out.println("releaseTime>>" + releaseTime);
+        System.out.println((i++) + ">> save Lycoris Recoil");
+        return "{'name':'save Lycoris Recoil'}";
+    }
 
     //    public String saveAnimeInfo(AnimeInfo animeInfo){
 //        System.out.println(" >>> "+animeInfo);
@@ -46,7 +48,7 @@ public class AnimeController {
 //    }
 
 
-//    public String saveAnimeInfo(@RequestParam List<String> name) {
+    //    public String saveAnimeInfo(@RequestParam List<String> name) {
 //        System.out.println(">>>");
 //        name.forEach(System.out::println);
 //        System.out.println((i++) + ">> save Lycoris Recoil");
@@ -55,7 +57,7 @@ public class AnimeController {
     @RequestMapping("/save")
     @ResponseBody
     public String saveAnimeInfo(@RequestBody AnimeInfo animeInfo) {
-        System.out.println(">>>"+animeInfo);
+        System.out.println(">>>" + animeInfo);
         System.out.println((i++) + ">> save Lycoris Recoil");
         return "{'name':'save Lycoris Recoil'}";
     }
