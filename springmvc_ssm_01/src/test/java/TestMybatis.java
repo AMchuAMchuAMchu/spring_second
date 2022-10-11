@@ -1,3 +1,4 @@
+import com.alibaba.fastjson.JSON;
 import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.dao.AnimeInfoMapperUtils;
 import com.itheima.pojo.AnimeInfo;
@@ -14,6 +15,22 @@ import java.util.List;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 public class TestMybatis {
+
+
+
+    @Test
+    public void testSelectById(){
+
+        AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
+
+        List<AnimeInfo> animeInfos = animeMapper.selectById(1);
+
+        Object o = JSON.toJSON(animeInfos);
+
+        System.out.println(o);
+
+
+    }
 
 
     @Test
