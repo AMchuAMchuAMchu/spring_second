@@ -17,6 +17,20 @@ public class TestMybatis {
 
 
 
+    @Test
+    public void testInsert(){
+
+        AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
+        AnimeInfo animeInfo = new AnimeInfo();
+        animeInfo.setName("SAO刀剑神域Alicization war of underworld");
+        animeInfo.setReleaseTime(2018);
+        animeInfo.setCharacter01("Alice");
+        animeInfo.setCharacter02("尤吉欧");
+        animeInfo.setId(25);
+        animeMapper.insertOne(animeInfo);
+
+    }
+
 
     @Test
     public void testSelect(){
