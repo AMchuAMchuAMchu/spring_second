@@ -7,6 +7,7 @@ import com.itheima.springconfig.SpringConfig;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -18,7 +19,36 @@ import java.util.List;
  * CreateTime ==> 2022-10-11 15:58:05
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
+@Component
 public class TestSSM {
+
+//    static{
+//        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+//    }
+
+
+    @Autowired
+    private AnimeInfo animeInfo;
+
+    @Test
+    public void testUpdate(){
+
+        AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
+
+
+
+        animeInfo.setName("Darling in the FRANxx");
+        animeInfo.setCharacter01("zero two");
+        animeInfo.setCharacter02("sixteenth");
+        animeInfo.setId(24);
+        animeInfo.setReleaseTime(2018);
+
+
+        mapper.updateAnime(animeInfo);
+
+
+    }
+
 
 
 

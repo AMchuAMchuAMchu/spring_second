@@ -46,9 +46,12 @@
         </where>
     </update>
     <delete id="deleteAnime">
-        delete
-        from anime_info
-        where id = #{id};
+        delete from anime_info
+        <where>
+            <if test="id != null">
+                id = #{id};
+            </if>
+        </where>
     </delete>
     <select id="selectAnime" resultMap="anime">
         select * from anime_info

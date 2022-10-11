@@ -39,9 +39,10 @@ public class AnimeInfoMapperUtils {
 
         SqlSessionFactory build = new SqlSessionFactoryBuilder().build(ras);
 
-        SqlSession sqlSession = build.openSession();
+        SqlSession sqlSession = build.openSession(true);
 
         AnimeInfoMapper mapper = sqlSession.getMapper(AnimeInfoMapper.class);
+
 
         return mapper;
 
