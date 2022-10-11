@@ -28,7 +28,7 @@ public class AnimeInfoMapperUtils {
     * Create Time ==> 2022/10/11 15:56
     * author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_start
     */
-    public AnimeInfoMapper getMapper() {
+    public static AnimeInfoMapper getMapper() {
 
         InputStream ras = null;
         try {

@@ -18,13 +18,13 @@ public class AnimeInfo {
 
     private String name;
 
-    private Integer releaseTime;
+    private int releaseTime;
 
     private String character01;
 
     private String character02;
 
-    private Integer id;
+    private int id;
 
 
 }
