@@ -16,6 +16,23 @@ import java.util.List;
 public class TestMybatis {
 
 
+    @Test
+    public void testUpdate(){
+
+        AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
+
+        AnimeInfo animeInfo = new AnimeInfo();
+        animeInfo.setName("SAO刀剑神域Alicization war of underworld");
+        animeInfo.setReleaseTime(2018);
+        animeInfo.setCharacter01("Alice茅野爱衣");
+        animeInfo.setCharacter02("尤吉欧岛崎信长");
+        animeInfo.setId(25);
+
+
+        animeMapper.updateById(animeInfo);
+
+    }
+
 
     @Test
     public void testInsert(){
