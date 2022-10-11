@@ -35,6 +35,12 @@ public class TestSSM {
     @Test
     public void testAnime(){
 
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+        SayHello bean = ac.getBean(SayHello.class);
+
+        bean.printHello();
+
         sayHello.printHello();
 
     }
