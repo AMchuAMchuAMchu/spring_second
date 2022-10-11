@@ -16,27 +16,27 @@
         update anime_info
         <set>
             <if test="name != null and name != ''">
-                name = #{name},
+                name = #{name}
             </if>
         </set>
         <set>
             <if test="releaseTime != null">
-                releaseTime = #{release_time},
+                and release_time = #{releaseTime}
             </if>
         </set>
         <set>
             <if test="character01 != null and character01 != ''">
-                character01 = #{character01},
+                and character01 = #{character01}
             </if>
         </set>
         <set>
             <if test="character02 != null and character02 != ''">
-                character02 = #{character02},
+                and character02 = #{character02}
             </if>
         </set>
         <set>
             <if test="id != null">
-                id = #{id}
+                and id = #{id}
             </if>
         </set>
         <where>

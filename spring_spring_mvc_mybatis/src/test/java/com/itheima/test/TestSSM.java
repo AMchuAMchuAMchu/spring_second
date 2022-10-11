@@ -70,7 +70,7 @@ public class TestSSM {
         AnimeInfoMapper mapper = AnimeInfoMapperUtils.getMapper();
 
 
-        mapper.deleteAnime(23);
+        mapper.deleteAnime(24);
 
     }
 
