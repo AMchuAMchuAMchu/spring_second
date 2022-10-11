@@ -11,6 +11,7 @@
     <modules>
         <module>spring_transaction</module>
         <module>springmvc_first01</module>
+        <module>spring_spring_mvc_mybatis</module>
     </modules>
 
     <properties>

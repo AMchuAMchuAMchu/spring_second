@@ -2,6 +2,7 @@ package com.itheima.controller;
 
 import com.itheima.pojo.AnimeInfo;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -44,16 +45,16 @@ public class AnimeController {
 //        return "{'name':'save Lycoris Recoil'}";
 //    }
 
-    @RequestMapping("/save")
-    @ResponseBody
+
 //    public String saveAnimeInfo(@RequestParam List<String> name) {
 //        System.out.println(">>>");
 //        name.forEach(System.out::println);
 //        System.out.println((i++) + ">> save Lycoris Recoil");
 //        return "{'name':'save Lycoris Recoil'}";
 //    }
-
-    public String saveAnimeInfo(@RequestParam AnimeInfo animeInfo) {
+    @RequestMapping("/save")
+    @ResponseBody
+    public String saveAnimeInfo(@RequestBody AnimeInfo animeInfo) {
         System.out.println(">>>"+animeInfo);
         System.out.println((i++) + ">> save Lycoris Recoil");
         return "{'name':'save Lycoris Recoil'}";
