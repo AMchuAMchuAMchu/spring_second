@@ -29,8 +29,8 @@ public class AnimeInfoController {
 
     int i = 0;
 
-    @RequestMapping("/test04")
-    public String test04(@RequestParam List<String> animes) {
+    @RequestMapping("/test05")
+    public String test05(@RequestBody List<AnimeInfo> animes) {
 
         i++;
 
@@ -49,6 +49,27 @@ public class AnimeInfoController {
 
     }
 
+//
+//    @RequestMapping("/test04")
+//    public String test04(@RequestParam List<String> animes) {
+//
+//        i++;
+//
+//        AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
+//
+//        List<AnimeInfo> animeInfos = animeMapper.selectById(1);
+//
+//        System.out.println("animes::" + animes);
+//
+//        System.out.println(">>>" + i);
+//
+//        animeInfos.forEach(System.out::println);
+//
+//
+//        return animeInfos.toString();
+//
+//    }
+//
 
 //
 //    @RequestMapping("/test03")
