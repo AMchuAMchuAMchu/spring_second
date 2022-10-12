@@ -30,7 +30,7 @@ public class AnimeInfoController {
     int i = 0;
 
     @RequestMapping("/test05")
-    public String test05(@RequestBody List<AnimeInfo> animes) {
+    public String test05(@RequestBody AnimeInfo animes) {
 
         i++;
 
