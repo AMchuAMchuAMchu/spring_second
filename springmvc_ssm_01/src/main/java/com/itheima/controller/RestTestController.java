@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Description ==> TODO
@@ -21,10 +22,10 @@ public class RestTestController {
 
 
 
-    @GetMapping("/json/{animeInfo}")
-    public AnimeInfo json(@RequestBody AnimeInfo animeInfo){
-        System.out.println("AnimeInfo::"+animeInfo);
-        return animeInfo;
+    @GetMapping("/json")
+    public List<AnimeInfo> json(@RequestBody List<AnimeInfo> animeInfoList){
+        System.out.println("AnimeInfo::"+animeInfoList);
+        return animeInfoList;
 
     }
 
