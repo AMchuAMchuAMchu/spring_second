@@ -39,19 +39,19 @@ public class RestTestController {
 
 
     @PostMapping("/{name}")
-    public String post(String name){
+    public String post(@PathVariable String name){
         System.out.println("name::"+name);
         return "post...";
     }
 
     @PutMapping("/{name}")
-    public String put(String name){
+    public String put(@PathVariable String name){
         System.out.println("name::"+name);
         return "put...";
     }
 
     @DeleteMapping("/{name}")
-    public String delete(String name){
+    public String delete(@PathVariable String name){
         System.out.println("name::"+name);
         return "delete...";
     }
