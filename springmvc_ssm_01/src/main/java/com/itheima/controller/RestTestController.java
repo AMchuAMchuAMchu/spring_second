@@ -1,5 +1,6 @@
 package com.itheima.controller;
 
+import com.itheima.pojo.AnimeInfo;
 import org.apache.ibatis.annotations.DeleteProvider;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,15 @@ import java.util.Date;
 @RequestMapping("/rest")
 @RestController
 public class RestTestController {
+
+
+
+    @GetMapping("/json/{animeInfo}")
+    public AnimeInfo json(@RequestBody AnimeInfo animeInfo){
+        System.out.println("AnimeInfo::"+animeInfo);
+        return animeInfo;
+
+    }
 
 
     @GetMapping( "/date")
