@@ -5,6 +5,7 @@ import com.itheima.dao.AnimeInfoMapperUtils;
 import com.itheima.pojo.AnimeInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.nio.ByteBuffer;
@@ -27,8 +28,8 @@ public class AnimeInfoController {
 
     int i = 0;
 
-    @RequestMapping("/test03")
-    public String test03(String [] animes) {
+    @RequestMapping("/test04")
+    public String test04(@RequestParam List<AnimeInfo> animes) {
 
         i++;
 
@@ -36,7 +37,7 @@ public class AnimeInfoController {
 
         List<AnimeInfo> animeInfos = animeMapper.selectById(1);
 
-        System.out.println("animes::" + Arrays.toString(animes));
+        System.out.println("animes::" + animes);
 
         System.out.println(">>>" + i);
 
@@ -48,6 +49,28 @@ public class AnimeInfoController {
     }
 
 
+//
+//    @RequestMapping("/test03")
+//    public String test03(String [] animes) {
+//
+//        i++;
+//
+//        AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
+//
+//        List<AnimeInfo> animeInfos = animeMapper.selectById(1);
+//
+//        System.out.println("animes::" + Arrays.toString(animes));
+//
+//        System.out.println(">>>" + i);
+//
+//        animeInfos.forEach(System.out::println);
+//
+//
+//        return animeInfos.toString();
+//
+//    }
+//
+//
 
 
 
