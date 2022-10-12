@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -35,7 +36,7 @@ public class AnimeInfoController {
 
         List<AnimeInfo> animeInfos = animeMapper.selectById(1);
 
-        System.out.println("animes::" + animes);
+        System.out.println("animes::" + Arrays.toString(animeInfos.toArray()));
 
         System.out.println(">>>" + i);
 
