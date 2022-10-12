@@ -30,7 +30,7 @@ public class AnimeInfoController {
     int i = 0;
 
     @RequestMapping("/test05")
-    public String test05(@RequestBody AnimeInfo animes) {
+    public String test05(@RequestBody List<AnimeInfo> animes) {
 
         i++;
 
@@ -43,7 +43,6 @@ public class AnimeInfoController {
         System.out.println(">>>" + i);
 
         animeInfos.forEach(System.out::println);
-
 
         return animeInfos.toString();
 
