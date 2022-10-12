@@ -1,6 +1,7 @@
 package com.itheima.controller;
 
 import org.apache.ibatis.annotations.DeleteProvider;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -18,8 +19,8 @@ import java.util.Date;
 public class RestTestController {
 
 
-    @GetMapping("/date")
-    public String date(Date date){
+    @GetMapping( "/date")
+    public String date(@DateTimeFormat(pattern = "yyyy-MM-dd")Date date){
 
         System.out.println("date"+date);
 
