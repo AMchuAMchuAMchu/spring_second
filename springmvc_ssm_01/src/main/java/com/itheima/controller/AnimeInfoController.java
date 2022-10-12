@@ -36,7 +36,7 @@ public class AnimeInfoController {
 
         List<AnimeInfo> animeInfos = animeMapper.selectById(1);
 
-        System.out.println("animes::" + Arrays.toString(animeInfos.toArray()));
+        System.out.println("animes::" + Arrays.toString(animes));
 
         System.out.println(">>>" + i);
 
