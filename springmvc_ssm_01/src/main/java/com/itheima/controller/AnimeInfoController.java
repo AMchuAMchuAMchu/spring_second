@@ -4,6 +4,7 @@ import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.dao.AnimeInfoMapperUtils;
 import com.itheima.pojo.AnimeInfo;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,7 +30,7 @@ public class AnimeInfoController {
     int i = 0;
 
     @RequestMapping("/test04")
-    public String test04(@RequestParam List<AnimeInfo> animes) {
+    public String test04(@RequestBody List<AnimeInfo> animes) {
 
         i++;
 
