@@ -26,19 +26,18 @@ public class AnimeInfoController {
 
     int i = 0;
 
-    @RequestMapping("/test01")
-    public String test01(String name,Integer id){
+    @RequestMapping("/test03")
+    public String test03(String [] animes) {
 
         i++;
 
         AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
 
-        List<AnimeInfo> animeInfos = animeMapper.selectAll();
+        List<AnimeInfo> animeInfos = animeMapper.selectById(1);
 
-        System.out.println("name::"+name);
-        System.out.println("id::"+id);
+        System.out.println("animes::" + animes);
 
-        System.out.println(">>>"+i);
+        System.out.println(">>>" + i);
 
         animeInfos.forEach(System.out::println);
 
@@ -47,6 +46,55 @@ public class AnimeInfoController {
 
     }
 
+
+
+
+
+//
+//    @RequestMapping("/test02")
+//    public String test02(String name, Integer id) {
+//
+//        i++;
+//
+//        AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
+//
+//        List<AnimeInfo> animeInfos = animeMapper.selectById(1);
+//
+//        System.out.println("name::" + name);
+//
+//        System.out.println("id::" + id);
+//
+//        System.out.println(">>>" + i);
+//
+//        animeInfos.forEach(System.out::println);
+//
+//
+//        return animeInfos.toString();
+//
+//    }
+
+//
+//    @RequestMapping("/test01")
+//    public String test01(String name, Integer id) {
+//
+//        i++;
+//
+//        AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
+//
+//        List<AnimeInfo> animeInfos = animeMapper.selectById(1);
+//
+//        System.out.println("name::" + name);
+//
+//        System.out.println("id::" + id);
+//
+//        System.out.println(">>>" + i);
+//
+//        animeInfos.forEach(System.out::println);
+//
+//
+//        return animeInfos.toString();
+//
+//    }
 
 
 }
