@@ -1,5 +1,6 @@
 package com.itheima.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.dao.AnimeInfoMapperUtils;
 import com.itheima.pojo.AnimeInfo;
@@ -30,7 +31,7 @@ public class AnimeInfoController {
     int i = 0;
 
     @RequestMapping("/test05")
-    public String test05(@RequestBody List<AnimeInfo> animes) {
+    public String test05(@RequestBody AnimeInfo animes) {
 
         i++;
 
@@ -38,7 +39,11 @@ public class AnimeInfoController {
 
         List<AnimeInfo> animeInfos = animeMapper.selectById(1);
 
-        System.out.println("animes::" + animes);
+        Object o = JSON.toJSON(animes);
+
+        System.out.println("animes::" + animeInfos);
+
+        System.out.println("animes::" + o);
 
         System.out.println(">>>" + i);
 
