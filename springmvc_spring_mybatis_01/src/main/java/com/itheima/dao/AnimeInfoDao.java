@@ -18,13 +18,13 @@ import java.util.List;
  */
 public interface AnimeInfoDao {
 
-    @Insert("insert into anime_info values(#{name},#{releaseTime},#{character01},#{character02},#{id})")
+    @Insert("insert into anime_info values(#{name},#{release_time},#{character01},#{character02},#{id})")
     Integer insertOne(AnimeInfo animeInfo);
 
     @Delete("delete from anime_info where id =#{id}")
     Integer deleteById(Integer id);
 
-    @Update("update anime_info set name = #{name},release_time  = #{releaseTime}, character01 = #{character01}, character02 = #{character02}, id = #{id} where id = #{id}  ")
+    @Update("update anime_info set name = #{name},release_time  = #{release_time}, character01 = #{character01}, character02 = #{character02}, id = #{id} where id = #{id}  ")
     Integer updateById(AnimeInfo animeInfo);
 
     @Select("select * from anime_info where id = #{id}")
