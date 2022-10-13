@@ -1,11 +1,9 @@
 package com.itheima.config;
 
-import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.context.annotation.Bean;
 
-import javax.print.attribute.standard.DateTimeAtCompleted;
 import javax.sql.DataSource;
 
 /**

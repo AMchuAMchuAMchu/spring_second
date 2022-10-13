@@ -1,6 +1,5 @@
 package com.itheima.service;
 
-import com.itheima.dao.AnimeInfoDao;
 import com.itheima.domain.AnimeInfo;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,14 +16,14 @@ import java.util.List;
 @Transactional
 public interface AnimeInfoService {
 
-    boolean insertOne(AnimeInfo animeInfo);
+    public boolean insertOne(AnimeInfo animeInfo);
 
-    boolean deleteById(Integer id);
+    public boolean deleteById(Integer id);
 
-    boolean updateById(AnimeInfo animeInfo);
+    public boolean updateById(AnimeInfo animeInfo);
 
-    AnimeInfo selectById(Integer id);
+    public AnimeInfo selectById(Integer id);
 
-    List<AnimeInfo> selectAll();
+    public List<AnimeInfo> selectAll();
 
 }

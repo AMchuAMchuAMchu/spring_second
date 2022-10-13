@@ -1,7 +1,6 @@
 package com.itheima.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
 
 /**
  * Description ==> TODO

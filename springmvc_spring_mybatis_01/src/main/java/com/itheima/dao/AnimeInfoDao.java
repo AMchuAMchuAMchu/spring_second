@@ -20,19 +20,19 @@ import java.util.List;
 public interface AnimeInfoDao {
 
     @Insert("insert into anime_info values(#{name},#{releaseTime},#{character01},#{character02},#{id})")
-    Integer insertOne(AnimeInfo animeInfo);
+    public void insertOne(AnimeInfo animeInfo);
 
     @Delete("delete from anime_info where id =#{id}")
-    Integer deleteById(Integer id);
+    public void deleteById(Integer id);
 
     @Update("update anime_info set name = #{name},release_time  = #{releaseTime}, character01 = #{character01}, character02 = #{character02}, id = #{id} where id = #{id}  ")
-    Integer updateById(AnimeInfo animeInfo);
+    public void updateById(AnimeInfo animeInfo);
 
     @Select("select * from anime_info where id = #{id}")
-    AnimeInfo selectById(Integer id);
+    public AnimeInfo selectById(Integer id);
 
     @Select("select * from anime_info")
-    List<AnimeInfo> selectAll();
+    public List<AnimeInfo> selectAll();
 
 
 }

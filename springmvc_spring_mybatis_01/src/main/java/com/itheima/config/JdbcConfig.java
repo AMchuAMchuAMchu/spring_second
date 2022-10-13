@@ -18,8 +18,8 @@ import javax.sql.DataSource;
  */
 public class JdbcConfig {
 
-    @Value("${jdbc.driverClassName}")
-    private String driverClassName;
+    @Value("${jdbc.driver}")
+    private String driver;
     @Value("${jdbc.url}")
     private String url;
     @Value("${jdbc.username}")
@@ -28,10 +28,10 @@ public class JdbcConfig {
     private String password;
 
     @Bean
-    public DataSource getDataSource(){
+    public DataSource dataSource(){
         DruidDataSource druidDataSource = new DruidDataSource();
 
-        druidDataSource.setDriverClassName(driverClassName);
+        druidDataSource.setDriverClassName(driver);
         druidDataSource.setUrl(url);
         druidDataSource.setUsername(username);
         druidDataSource.setUsername(password);
@@ -39,7 +39,7 @@ public class JdbcConfig {
     }
 
     @Bean
-    public PlatformTransactionManager getTransactional(DataSource dataSource){
+    public PlatformTransactionManager getTransactionalManager(DataSource dataSource){
 
         DataSourceTransactionManager ds = new DataSourceTransactionManager();
 
