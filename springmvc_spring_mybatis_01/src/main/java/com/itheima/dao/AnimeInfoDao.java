@@ -1,5 +1,13 @@
 package com.itheima.dao;
 
+import com.itheima.domain.AnimeInfo;
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+
+import java.util.List;
+
 /**
  * Description ==> TODO
  * BelongsProject ==> spring_second
@@ -10,6 +18,20 @@ package com.itheima.dao;
  */
 public interface AnimeInfoDao {
 
+    @Insert("insert into anime_info values(#{name},#{releaseTime},#{character01},#{character02},#{id})")
+    Integer insertOne(AnimeInfo animeInfo);
+
+    @Delete("delete from anime_info where id =#{id}")
+    Integer deleteById(Integer id);
+
+    @Update("update anime_info set name = #{name},release_time  = #{releaseTime}, character01 = #{character01}, character02 = #{character02}, id = #{id} where id = #{id}  ")
+    Integer updateById(AnimeInfo animeInfo);
+
+    @Select("select * from anime_info where id = #{id}")
+    AnimeInfo selectById(Integer id);
+
+    @Select("select * from anime_info")
+    List<AnimeInfo> selectAll();
 
 
 }

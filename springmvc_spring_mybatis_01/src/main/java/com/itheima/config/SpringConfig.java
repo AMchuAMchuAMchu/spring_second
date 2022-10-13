@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Configuration
 @ComponentScan("com.itheima.service")
-@PropertySource("jdbc.properties")
+@PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MybatisConfig.class})
 @EnableTransactionManagement
 public class SpringConfig {
