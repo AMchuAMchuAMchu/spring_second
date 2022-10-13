@@ -18,7 +18,7 @@ public interface AnimeInfoMapper {
 
     List<AnimeInfo> selectById(Integer id);
 
-    void insertOne(AnimeInfo animeInfo);
+    Integer insertOne(AnimeInfo animeInfo);
 
     Integer deleteById(Integer id);
 

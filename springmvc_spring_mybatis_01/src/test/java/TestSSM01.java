@@ -1,4 +1,5 @@
 import com.itheima.config.SpringConfig;
+import com.itheima.dao.AnimeInfoDao;
 import com.itheima.domain.AnimeInfo;
 import com.itheima.service.AnimeInfoService;
 import org.junit.Test;
@@ -26,12 +27,14 @@ public class TestSSM01 {
     @Autowired
     private AnimeInfoService animeInfoService;
 
+
     @Test
     public void testSelectAll(){
 
 
         List<AnimeInfo> animeInfos = animeInfoService.selectAll();
         animeInfos.forEach(System.out::println);
+
 
 
     }

@@ -40,9 +40,17 @@ public class TestMybatis {
 
         AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
 
-        Integer integer = animeMapper.deleteById(24);
-
-        System.out.println("integer::"+integer);
+//        Integer integer = animeMapper.deleteById(24);
+//
+//        System.out.println("integer::"+integer);
+        AnimeInfo animeInfo = new AnimeInfo();
+        animeInfo.setId(111);
+        animeInfo.setCharacter01("111");
+        animeInfo.setCharacter02("111");
+        animeInfo.setName("111");
+        animeInfo.setReleaseTime(111);
+        Integer integer = animeMapper.insertOne(animeInfo);
+        System.out.println(">>"+integer);
 
     }
 
