@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 @Configuration
-@ComponentScan("com.itheima.service")
+@ComponentScan({"com.itheima.service"})
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MybatisConfig.class})
 @EnableTransactionManagement

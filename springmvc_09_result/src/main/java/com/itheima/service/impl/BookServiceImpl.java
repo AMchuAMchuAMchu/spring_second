@@ -1,7 +1,7 @@
 package com.itheima.service.impl;
 
 import com.itheima.dao.BookDao;
-import com.itheima.domain.Book;
+import com.itheima.domain.AnimeInfo;
 import com.itheima.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,12 +13,12 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private BookDao bookDao;
 
-    public boolean save(Book book) {
+    public boolean save(AnimeInfo book) {
         bookDao.save(book);
         return true;
     }
 
-    public boolean update(Book book) {
+    public boolean update(AnimeInfo book) {
         bookDao.update(book);
         return true;
     }
@@ -28,11 +28,11 @@ public class BookServiceImpl implements BookService {
         return true;
     }
 
-    public Book getById(Integer id) {
+    public AnimeInfo getById(Integer id) {
         return bookDao.getById(id);
     }
 
-    public List<Book> getAll() {
+    public List<AnimeInfo> getAll() {
         return bookDao.getAll();
     }
 }

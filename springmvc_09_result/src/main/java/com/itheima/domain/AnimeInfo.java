@@ -1,6 +1,6 @@
 package com.itheima.domain;
 
-public class Book {
+public class AnimeInfo {
     private Integer id;
     private String type;
     private String name;

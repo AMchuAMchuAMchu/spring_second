@@ -23,6 +23,9 @@ public class MybatisConfig {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 
         sqlSessionFactoryBean.setDataSource(dataSource);
+        sqlSessionFactoryBean.setTypeAliasesPackage("com.itheima.domain");
+
+
 
         return sqlSessionFactoryBean;
     }

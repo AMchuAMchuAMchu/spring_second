@@ -1,6 +1,6 @@
 package com.itheima.service;
 
-import com.itheima.domain.Book;
+import com.itheima.domain.AnimeInfo;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -13,14 +13,14 @@ public interface BookService {
      * @param book
      * @return
      */
-    public boolean save(Book book);
+    public boolean save(AnimeInfo book);
 
     /**
      * 修改
      * @param book
      * @return
      */
-    public boolean update(Book book);
+    public boolean update(AnimeInfo book);
 
     /**
      * 按id删除
@@ -34,11 +34,11 @@ public interface BookService {
      * @param id
      * @return
      */
-    public Book getById(Integer id);
+    public AnimeInfo getById(Integer id);
 
     /**
      * 查询全部
      * @return
      */
-    public List<Book> getAll();
+    public List<AnimeInfo> getAll();
 }
