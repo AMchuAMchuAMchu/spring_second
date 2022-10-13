@@ -18,7 +18,7 @@ import javax.sql.DataSource;
  */
 public class JdbcConfig {
 
-    @Value("${driverClassName}")
+    @Value("${jdbc.driverClassName}")
     private String driverClassName;
     @Value("${jdbc.url}")
     private String url;
