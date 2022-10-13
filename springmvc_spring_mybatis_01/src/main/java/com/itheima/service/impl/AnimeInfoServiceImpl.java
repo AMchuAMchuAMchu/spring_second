@@ -26,20 +26,17 @@ public class AnimeInfoServiceImpl implements AnimeInfoService {
 
     @Override
     public boolean insertOne(AnimeInfo animeInfo) {
-        animeInfoDao.insertOne(animeInfo);
-        return true;
+        return animeInfoDao.insertOne(animeInfo)>0;
     }
 
     @Override
     public boolean deleteById(Integer id) {
-        animeInfoDao.deleteById(id);
-        return true;
+        return animeInfoDao.deleteById(id)>0;
     }
 
     @Override
     public boolean updateById(AnimeInfo animeInfo) {
-        animeInfoDao.updateById(animeInfo);
-        return true;
+        return animeInfoDao.updateById(animeInfo)>0;
     }
 
     @Override

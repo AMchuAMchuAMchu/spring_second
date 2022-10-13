@@ -5,7 +5,6 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -20,19 +19,19 @@ import java.util.List;
 public interface AnimeInfoDao {
 
     @Insert("insert into anime_info values(#{name},#{releaseTime},#{character01},#{character02},#{id})")
-    public void insertOne(AnimeInfo animeInfo);
+    Integer insertOne(AnimeInfo animeInfo);
 
     @Delete("delete from anime_info where id =#{id}")
-    public void deleteById(Integer id);
+    Integer deleteById(Integer id);
 
     @Update("update anime_info set name = #{name},release_time  = #{releaseTime}, character01 = #{character01}, character02 = #{character02}, id = #{id} where id = #{id}  ")
-    public void updateById(AnimeInfo animeInfo);
+    Integer updateById(AnimeInfo animeInfo);
 
     @Select("select * from anime_info where id = #{id}")
-    public AnimeInfo selectById(Integer id);
+    AnimeInfo selectById(Integer id);
 
     @Select("select * from anime_info")
-    public List<AnimeInfo> selectAll();
+    List<AnimeInfo> selectAll();
 
 
 }

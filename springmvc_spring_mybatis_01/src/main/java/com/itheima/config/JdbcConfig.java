@@ -4,6 +4,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
@@ -34,7 +35,7 @@ public class JdbcConfig {
         druidDataSource.setDriverClassName(driver);
         druidDataSource.setUrl(url);
         druidDataSource.setUsername(username);
-        druidDataSource.setUsername(password);
+        druidDataSource.setPassword(password);
         return druidDataSource;
     }
 
