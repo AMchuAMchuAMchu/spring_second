@@ -11,18 +11,18 @@ import java.util.List;
 public interface BookDao {
 
 //    @Insert("insert into tbl_book values(null,#{type},#{name},#{description})")
-    @Insert("insert into tbl_book (type,name,description) values(#{type},#{name},#{description})")
+    @Insert("insert into anime_info values(#{id},#{name},#{character01},#{character02},#{releaseTime})")
     public void save(AnimeInfo book);
 
-    @Update("update tbl_book set type = #{type}, name = #{name}, description = #{description} where id = #{id}")
+    @Update("update anime_info set id = #{id}, name = #{name}, character01 = #{character01}, character02 = #{character02}, release_time = #{releaseTime} where id = #{id}")
     public void update(AnimeInfo book);
 
-    @Delete("delete from tbl_book where id = #{id}")
+    @Delete("delete from anime_info where id = #{id}")
     public void delete(Integer id);
 
-    @Select("select * from tbl_book where id = #{id}")
+    @Select("select * from anime_info where id = #{id}")
     public AnimeInfo getById(Integer id);
 
-    @Select("select * from tbl_book")
+    @Select("select * from anime_info")
     public List<AnimeInfo> getAll();
 }
