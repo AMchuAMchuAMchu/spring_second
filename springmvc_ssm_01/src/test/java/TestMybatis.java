@@ -40,7 +40,9 @@ public class TestMybatis {
 
         AnimeInfoMapper animeMapper = AnimeInfoMapperUtils.getAnimeMapper();
 
-        animeMapper.deleteById(26);
+        Integer integer = animeMapper.deleteById(24);
+
+        System.out.println("integer::"+integer);
 
     }
 

@@ -14,6 +14,7 @@
         <module>spring_spring_mvc_mybatis</module>
         <module>springmvc_first_02</module>
         <module>springmvc_ssm_01</module>
+        <module>springmvc_spring_mybatis_01</module>
     </modules>
 
     <properties>

@@ -31,6 +31,7 @@ public class RestTestController {
 
 
     @GetMapping( "/date")
+    @ResponseBody
     public String date(@DateTimeFormat(pattern = "yyyy-MM-dd")Date date){
 
         System.out.println("date"+date);

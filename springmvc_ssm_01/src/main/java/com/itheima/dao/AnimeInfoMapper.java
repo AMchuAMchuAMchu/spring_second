@@ -20,7 +20,7 @@ public interface AnimeInfoMapper {
 
     void insertOne(AnimeInfo animeInfo);
 
-    void deleteById(Integer id);
+    Integer deleteById(Integer id);
 
     void updateById(AnimeInfo animeInfo);
 
