@@ -50,7 +50,7 @@ public class AnimeInfoController {
     }
 
     @PutMapping
-    public Result updateById(AnimeInfo animeInfo){
+    public Result updateById(@RequestBody AnimeInfo animeInfo){
 
         boolean b = animeInfoService.updateById(animeInfo);
 
@@ -62,6 +62,7 @@ public class AnimeInfoController {
 
     @DeleteMapping("/{id}")
     public Result deleteById(@PathVariable Integer id){
+
         boolean b = animeInfoService.deleteById(id);
 
         return new Result(b?Code.CODE_DELETE_SUCCESS:Code.CODE_DELETE_ERR,b?"success":"failed");
@@ -71,7 +72,7 @@ public class AnimeInfoController {
 
 
     @PostMapping
-    public Result post(AnimeInfo animeInfo){
+    public Result post(@RequestBody AnimeInfo animeInfo){
 
         boolean b = animeInfoService.insertOne(animeInfo);
 
