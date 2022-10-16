@@ -43,7 +43,14 @@ public class AnimeInfoController {
 
     @GetMapping("/{id}")
     public Result selectById(@PathVariable Integer id){
-        int i = 10/0;
+        if (id == 1){
+            throw new BusinessException("不要用你的流氓手段挑战我的技术底线...^_^",new NumberFormatException(),Code.GET_EXCEPTION);
+        }
+        try {
+            int i = 10/0;
+        } catch (Exception e) {
+            throw  new SystemException("果咩纳塞~~",new StackOverflowError(),Code.GET_EXCEPTION);
+        }
         AnimeInfo animeInfo = animeInfoService.selectById(id);
         return new Result(animeInfo!=null?Code.GET_SUCCESS:Code.GET_ERR,animeInfo!=null?"SUCCESS":"FAILED",animeInfo);
     }
