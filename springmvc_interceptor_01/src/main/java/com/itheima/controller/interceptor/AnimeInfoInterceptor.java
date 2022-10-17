@@ -5,8 +5,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.security.Principal;
+import java.util.Arrays;
+import java.util.Enumeration;
 
 /**
  * Description ==> TODO
@@ -22,6 +26,14 @@ public class AnimeInfoInterceptor implements HandlerInterceptor{
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String requestURI = request.getRequestURI();
+        String remoteUser = request.getRemoteUser();
+        Cookie[] cookies = request.getCookies();
+        Enumeration<String> headerNames = request.getHeaderNames();
+        Principal userPrincipal = request.getUserPrincipal();
+        System.out.println("userPrincipal >>> "+userPrincipal);
+        System.out.println("headerNames >>> "+headerNames);
+        System.out.println("cookies >>> "+Arrays.toString(cookies));
+        System.out.println("remoteUser >>> "+remoteUser);
         System.out.println("requestURI >>> "+requestURI);
         System.out.println("preHandle...");
         return true;
