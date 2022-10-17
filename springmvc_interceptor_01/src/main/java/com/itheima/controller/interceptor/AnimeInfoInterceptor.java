@@ -21,6 +21,8 @@ public class AnimeInfoInterceptor implements HandlerInterceptor{
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        String requestURI = request.getRequestURI();
+        System.out.println("requestURI >>> "+requestURI);
         System.out.println("preHandle...");
         return true;
     }
